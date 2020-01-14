@@ -1,0 +1,236 @@
+body{
+    background: url(img/capa.png),
+                url(img/ruido.png),
+                linear-gradient(50deg,#ff4169,#7c26f8);
+                background-attachment: fixed; /*Deixando o background fixo */
+                font-family: Helvetica,Arial,sans-serif;
+}
+body, html, #home{
+    height: 100%; /*Ocupando 100% da página, para
+    que possamos manipular as posições dos elementos,
+    exemplo, preciso posicionar o título <h1> no centro,
+    para isso, preciso ocupar 100% do espaço da página */
+    /*Escondendo a barra de rolagem, valor visible é o 
+    valor padrão */
+    overflow-x: hidden;
+}
+
+/*customizando a barra de navegação */
+nav.navbar-transparente{
+    background: rgba(0,0,0,0.6);
+    padding: 15px 0px;
+}
+
+/*Em caso de sobrepor as classes do bootstrap, fique atento na
+configuração, marque o trecho da classe com o mouse, clique no botão
+direito e vá em inspecionar no navegador, você verá os níveis de sopreposição 
+das classes e aplique-as do mesmo jeito */
+.navbar-light .navbar-nav .nav-link{
+    color: white;
+}
+
+.navbar-light .navbar-nav .nav-link:hover{
+    color: #9bf0e1;
+
+}
+
+/*Para acessar a classe de configuraçãod o menu, posicionei 
+o mouse sobre o menu, com o botão direito fui em inspecionar
+e procurei pela configuração: */
+.navbar-light .navbar-toggler {
+    color: rgba(0,0,0,.5);
+    border-color:white;
+}
+
+.divisor{
+    width: 1px;
+    background: white;
+    margin: 2px 15px;
+}
+
+/*Formatando a capa*/
+.capa{
+    text-align: center;
+}
+
+/*Aplicando uma formatação específica para os botões,
+basta utilizar a classe btn bnt-custom para que seja 
+possível */
+.btn-custom{
+    color: white;
+    border-radius: 500px;
+    -webkit-border-radius: 500px;
+    -moz-border-radius: 500px;
+    text-transform: uppercase; /*Todas as classes com letra maiuscula */
+    transition: background 0.4s, color 0.4s;
+    /*A transição funcionará por 0.4s, por exemplo, o background e a cor
+    terão esse tempo*/
+    padding: 10px 20px;
+}
+
+.btn-roxo{
+    background: #7c25f8;
+}
+
+.btn-roxo:hover{
+    background: #6207e3;
+    color: white;
+}
+
+.btn-branco{
+    border: 2px solid white;
+}
+
+.btn-branco:hover{
+    background-color: white;
+	color: black;
+}
+
+/*Alterando a formatação do carousel, lembre-se que a alteração foi feita
+a partir do inspecioanr do navegador */
+.carousel-control-next, .carousel-control-prev {
+	width: 5%;
+}
+/*Aréa de serviços----------------------- */
+.caixa {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+#servicos{
+    background: white;
+}
+
+#servicos h2, h3 {
+	color: #7c25f8;
+}
+
+#recursos {
+	color: white;
+}
+
+#recursos h2 {
+	color: white;
+}
+
+#recursos h3 {
+	color: #9bf0e1;
+}
+
+/* Rodapé
+-----------------------------*/
+footer {
+	background: #000;
+	padding: 50px 0px 20px 0px; /*superior direita inferior esquerda */
+    position: relative; /*Ao utilizar relative o nosso rodapé ficará 
+    sobre o background do body */
+}
+
+footer h4 {
+	color: #919496;
+	font-size: 0.8em;
+	text-transform: uppercase;
+}
+
+footer .navbar-nav a {
+	color: white;
+	font-size: 0.8em;
+}
+
+footer .navbar-nav a:hover {
+	color: #9bf0e1;
+	text-decoration: none;
+}
+
+footer ul {
+    list-style: none; /*Tirando a formatação 
+    de lista padrões */
+}
+
+footer ul li{
+	float: right;
+	margin: 0 5px;
+}
+
+/*Classe utilizada para mudar os espaçamentos------------------ */
+.albuns{
+    padding: 10px 0; /*Espaçamento superior e inferior de 10px e 0 nas laterais */
+
+}
+
+.rotacionar{
+    padding-left: 80px;
+    /*Abaixo os prefixos para o transform */
+    -ms-transform: rotate(30deg); /* IE 9 */
+    -webkit-transform: rotate(30deg); /* Chrome, Safari, Opera */
+    transform: rotate(30deg); /*30° Graus */
+}
+/*Tipografia-------------------------------------------------- */
+h1{
+    font-weight: 900; /*espessura da fonte */
+    letter-spacing: -0.05em;
+    margin-bottom: 50px;
+    color: white;
+}
+
+h2 {
+	font-size: 3em;
+	font-weight: 700;
+	letter-spacing: -0.04em;
+}
+
+h3 {
+	font-size: 2em;
+	font-weight: 700;
+	letter-spacing: -0.04em;
+}
+
+/*Condições de acordo com o tamanho da tela 
+    Veja que agora iremos inserir nossas classes
+    das quais queremos que haja uma nova formatação
+    de acordo com o tamanho
+
+    Iremos configurar a fonte e os botões de acordo com o tamanho da tela
+*/
+
+/*Extea Small */
+@media (max-width: 575.98px){
+    h1{
+        font-size: 3em;
+    }
+    .btn-custom{
+        margin: 10px 15px; /*10px superior e inferior e 15px nas laterais 
+        Isso evita que os botões fiquem grudados*/
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+    h1{
+        font-size: 3em;
+    }
+    .btn-custom{
+        margin: 10px 15px; /*10px superior e inferior e 15px nas laterais
+        Isso evita que os botões fiquem grudados */
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    h1{
+        font-size: 4em;
+    }
+
+}
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+    h1{
+        font-size: 5em;
+    }
+}
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+    h1{
+        font-size: 6em;
+    }
+}

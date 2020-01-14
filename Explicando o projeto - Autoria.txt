@@ -1,0 +1,6 @@
+Esse projeto foi realizado em uma aula prática do curso de desenvolvimento web completo,
+realizado pelo professor Jamilton Damasceno e recriado por mim no meu respositório local.
+
+link do curso: https://www.udemy.com/course/web-completo/
+seção da aula: Seção 7: Bootstrap 4 & Design responsivo
+aula: 133 a 135
